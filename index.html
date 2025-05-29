@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,7 +37,6 @@
     <input type="number" id="horas" value="4.5" step="0.1"/>
 
     <button onclick="calcularPaneles()">Calcular</button>
-    <button onclick="descargarPDF()">Descargar PDF</button>
 
     <div id="resultado"></div>
     <div id="botonPDF" style="display:none; margin-top: 20px;">
@@ -49,7 +49,12 @@
     <a href="https://w.app/mtk2025" target="_blank" class="whatsapp-button">Contáctanos por WhatsApp</a>
   </div>
 
+  <!-- Scripts adaptados para GitHub Pages -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    window.jsPDF = window.jspdf.jsPDF;
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
