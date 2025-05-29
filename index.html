@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Paneles Solares</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>MTK Energía Solar - ¡Haz que el Sol trabaje para ti!</h1>
+    <p>Expertos en soluciones solares personalizadas para hogares y negocios.</p>
+  </header>
+
+  <div class="calculator">
+    <h2>Calculadora de Paneles Solares</h2>
+
+    <label for="recibo">Costo del recibo CFE (MXN)</label>
+    <input type="number" id="recibo" placeholder="$" />
+
+    <label for="periodo">Selecciona el periodo del recibo</label>
+    <select id="periodo">
+      <option value="mensual">Mensual</option>
+      <option value="bimestral" selected>Bimestral</option>
+      <option value="semestral">Semestral</option>
+      <option value="anual">Anual</option>
+    </select>
+
+    <label for="tipoPanel">Selecciona el tipo de panel (W)</label>
+    <select id="tipoPanel">
+      <option value="550">550 W</option>
+      <option value="620" selected>620 W</option>
+    </select>
+
+    <label for="horas">Horas solares pico por día</label>
+    <input type="number" id="horas" value="4.5" step="0.1"/>
+
+    <button onclick="calcularPaneles()">Calcular</button>
+    <button onclick="descargarPDF()">Descargar PDF</button>
+
+    <div id="resultado"></div>
+    <div id="botonPDF" style="display:none; margin-top: 20px;">
+      <button onclick="descargarPDF()">Descargar Cotización en PDF</button>
+    </div>
+  </div>
+
+  <div class="cta">
+    <p>¿Tienes dudas? ¡Habla con un asesor ahora!</p>
+    <a href="https://w.app/mtk2025" target="_blank" class="whatsapp-button">Contáctanos por WhatsApp</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
